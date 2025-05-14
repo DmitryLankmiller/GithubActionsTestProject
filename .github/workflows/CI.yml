@@ -11,9 +11,9 @@ jobs:
         with:
           node-version: '20.12.2'
       - name: Install dependencies
-        run: pnpm i
+        run: npm ci
       - name: Run linter
-        run: pnpm lint
+        run: npm run lint
   check-format:
       runs-on: ubuntu-latest
       steps:
@@ -24,6 +24,6 @@ jobs:
         with:
           node-version: '20.12.2'
       - name: Install dependencies
-        run: pnpm i
+        run: npm ci
       - name: Run prettier
-        run: pnpm prettify
+        run: npm run prettify

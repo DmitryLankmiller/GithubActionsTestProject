@@ -46,7 +46,7 @@ jobs:
           name: dist dirs
           path: |
             ./backend/dist
-            ./frontend/dist
+            ./webapp/dist
             ./node_modules
             ./backend/node_modules
-            ./frontend/node_modules
+            ./webapp/node_modules

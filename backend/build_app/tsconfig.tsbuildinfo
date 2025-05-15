@@ -1,1 +1,0 @@
-{"root":["../src/index.ts","../src/lib/ideas.ts","../src/lib/trpc.ts","../src/router/index.ts","../src/router/createIdea/index.ts","../src/router/createIdea/input.ts","../src/router/getIdea/index.ts","../src/router/getIdeas/index.ts"],"version":"5.8.3"}

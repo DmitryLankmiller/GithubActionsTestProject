@@ -4,7 +4,7 @@
     "transpileOnly": true
   },
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "build_app",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,

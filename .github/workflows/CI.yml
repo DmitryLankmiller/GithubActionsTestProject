@@ -20,3 +20,33 @@ jobs:
         run: pnpm lint
       - name: Run prettier
         run: pnpm prettify
+  build:
+    needs: check-code-style
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.12.2'
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Install dependencies
+        run: pnpm i
+      - name: Build frontend
+        run: pnpm w build
+      - name: Build backend
+        run: pnpm b build
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist dirs
+          path: |
+            ./backend/dist
+            ./frontend/dist
+            ./node_modules
+            ./backend/node_modules
+            ./frontend/node_modules

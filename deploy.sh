@@ -15,9 +15,9 @@ nvm install
 # Check node version
 node -v
 # Check npm version
-pnpm -v
+npm -v
 # Install dependencies
-pnpm i
+npm i
 # Build application
 pnpm w build
 # Move build to the www folder
